@@ -1,4 +1,4 @@
-baseurl = "https://alpscode.com"
+baseurl = "https://alpscode.com/"
 title = "Alps Code"
 theme = "hugo-universal-theme"
 #themesDir = "../.."
