@@ -18,7 +18,7 @@ paginate = 10
 # Main menu
 
 [[menu.main]]
-    name = "blog"
+    name = "Blog"
     url  = "/"
     weight = 1
 
@@ -28,7 +28,7 @@ paginate = 10
 #    weight = 2
 
 [[menu.main]]
-    name = "about me"
+    name = "About"
     url = "/about"
     weight = 2
 
@@ -96,16 +96,20 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "your@email.com"
 
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
+    about_us = "<p>AlpsCode is a technical blog about programming languages, tips, examples, and tech trends. Follow me at <a href='https://twitter.com/alpscode'>Twitter</a> and <a href='https://github.com/alpscode'>Github</a>, contact me for more.</p>"
+    copyright = """
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>&nbsp; &nbsp;This blog is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    """
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
-    logo = "img/logo.png"
-    logo_small = "img/logo-small.png"
+    logo = "img/logo.svg"
+    logo_small = "img/logo.svg"
     address = """<p>alpscode [at] gmail</p>
-    <p><a href="https://github.com/alpscode"><i class='fa fa-3x fa-github'></i></a>
+    <p><a href="https://github.com/alpscode"><i class='fa fa-2x fa-github'></i></a>
+    <a href="https://twitter.com/alpscode"><i class='fa fa-2x fa-twitter'></i></a>
+    <a href="https://stackoverflow.com/users/10735543/alp-c"><i class='fa fa-2x fa-stack-overflow'></i></a>
     """
     #latitude = "-12.043333"
     #longitude = "-77.028333"

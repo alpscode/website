@@ -1,8 +1,8 @@
 +++
 title= "My Demo Post"
 date= 2018-12-01T21:51:06-05:00
-tags= ["python", "code", "demo", "example"]
-categories= ["programming"]
+tags= ["Python", "Code", "Demo", "Example"]
+categories= ["Programming"]
 banner= "img/banners/code1.jpeg"
 +++
 
