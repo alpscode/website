@@ -1,0 +1,116 @@
+
+/* modifications */
+
+.post-content img {
+    max-width: 100%;
+}
+
+span.screenshot img {
+    margin: 5px auto;
+    display: block;
+    max-width: 90%;
+    border: 3px double #38a7bb;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+#footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-pills > li > a {
+    text-transform: capitalize;
+}
+
+.panel.sidebar-menu .panel-heading {
+    text-transform: none;
+}
+
+#heading-breadcrumbs h1 {
+    text-transform: capitalize;
+}
+
+.pager {
+    text-transform: none;
+}
+
+.btn {
+    text-transform: none;
+}
+
+#blog-listing-medium .post h2 {
+    text-transform: none;
+}
+
+#blog-listing-medium .post .author-category {
+    text-transform: capitalize;
+}
+
+.panel.sidebar-menu ul.tag-cloud li a {
+    text-transform: capitalize;
+}
+
+#footer h4 {
+    text-transform: none;
+}
+
+img.banner-img {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover > img.banner-img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+a.navbar-brand.home {
+    margin-right: 5px;
+}
+
+#footer i {
+    color: white;
+    transition: all 0.2s ease-out;
+}
+
+#footer i:hover {
+    color: gray;
+}
+
+.navbar-brand > img {
+    max-height: 42px;
+    margin-right: 2px;
+    overflow: visible;
+}
+
+.navbar ul.nav > li > a {
+    text-transform: none;
+    text-decoration: none;
+}
+
+
+.box-image-text .image {
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.box-simple {
+  min-height: 230px;
+}
