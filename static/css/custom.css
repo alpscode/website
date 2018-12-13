@@ -12,6 +12,18 @@ span.screenshot img {
     border: 3px double #38a7bb;
 }
 
+img.screenshot {
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid #38a7bb;
+    display: block;
+    max-width: 90%;
+}
+
+a.int-img + figcaption {
+    text-align: center;
+}
+
 h1 {
     font-size: 30px;
 }
