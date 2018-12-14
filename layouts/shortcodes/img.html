@@ -1,0 +1,12 @@
+<figure class="ins-fig {{ .Get "figcls" }}">
+{{ if .Get "href" }}
+<a class="int-img" href="{{ .Get "href" }}">
+{{ end }}
+<img src="{{ .Get "src" }}" class="{{ .Get "class" }} img-responsive pull-center">
+{{ if .Get "href" }}
+</a>
+{{ end }}
+{{ if .Get "caption" }}
+<figcaption><i>{{ .Get "caption" }}</i></figcaption>
+{{ end }}
+</figure>

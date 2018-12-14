@@ -5,6 +5,14 @@
     max-width: 100%;
 }
 
+div#content {
+    margin-bottom: 40px;
+}
+
+figure.ins-fig {
+    margin: 15px auto;
+}
+
 span.screenshot img {
     margin: 5px auto;
     display: block;
@@ -20,7 +28,7 @@ img.screenshot {
     max-width: 90%;
 }
 
-a.int-img + figcaption {
+figcaption {
     text-align: center;
 }
 
@@ -40,9 +48,17 @@ h4 {
     font-size: 12px;
 }
 
+div#comments {
+    clear: both;
+}
+
 #footer {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.pull-center {
+    margin: 0 auto;
 }
 
 .nav-pills > li > a {

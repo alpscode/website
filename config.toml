@@ -96,7 +96,7 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "your@email.com"
 
-    about_us = "<p>AlpsCode is a technical blog about programming languages, tips, examples, and tech trends. Follow me at <a href='https://twitter.com/alpscode'>Twitter</a> and <a href='https://github.com/alpscode'>Github</a>, contact me for more.</p>"
+    about_us = "<p>AlpsCode is a technical blog about programming languages, tips, examples, and tech trends. Follow me at <a href='https://twitter.com/alpscode'>Twitter</a> and <a href='https://github.com/alpscode'>Github</a>.</p>"
     copyright = """
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>&nbsp; &nbsp;This blog is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
     """
