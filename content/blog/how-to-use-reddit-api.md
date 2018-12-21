@@ -2,8 +2,8 @@
 draft = false
 title = "How to use Reddit API"
 date = "2018-12-17T23:28:00-05:00"
-tags = ["how-to", "reddit", "api", "python"]
-categories = ["programming"]
+tags = ["How-to", "Reddit", "API", "Python"]
+categories = ["Programming"]
 banner = "img/banners/reddit-1.jpeg"
 author = "Alp Cay"
 +++
@@ -173,8 +173,7 @@ corgi
 lookatmydog
 ```
 
-You can find all the codes in my Jupyter notebook repository:
-https://nbviewer.jupyter.org/github/alpscode/notebooks/blob/master/reddit-api/RedditAPI-1.ipynb
+You can find all the codes in my [Jupyter notebook repository](https://nbviewer.jupyter.org/github/alpscode/notebooks/blob/master/reddit-api/RedditAPI-1.ipynb).
 
 ## Next steps
 

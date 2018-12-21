@@ -62,7 +62,7 @@ div#comments {
 }
 
 .nav-pills > li > a {
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .panel.sidebar-menu .panel-heading {
@@ -70,7 +70,7 @@ div#comments {
 }
 
 #heading-breadcrumbs h1 {
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .pager {
@@ -86,11 +86,11 @@ div#comments {
 }
 
 #blog-listing-medium .post .author-category {
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .panel.sidebar-menu ul.tag-cloud li a {
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 #footer h4 {
@@ -141,4 +141,8 @@ a.navbar-brand.home {
 
 .box-simple {
   min-height: 230px;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
