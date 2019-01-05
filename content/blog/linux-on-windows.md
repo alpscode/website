@@ -157,7 +157,7 @@ export USERNAME="cmd.exe /c echo %USERNAME%"
 {{< /highlight >}}
 
 to your `.bashrc` file enables `$USERNAME` variable on Linux terminal.
-Accesing the Windows username may come handy when writing scripts.
+Accessing the Windows username may come handy when writing scripts.
 
 ### Changing the username
 
