@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 title = "Using Linux on Windows"
 date = "2019-01-05T14:30:04-05:00"
 tags = ["Linux", "How-to"]
