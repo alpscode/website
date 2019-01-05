@@ -1,6 +1,22 @@
 
 /* modifications */
 
+table {
+    margin: 0 auto 10px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    border-bottom: 1px gray solid;
+}
+
 .post-content img {
     max-width: 100%;
 }
