@@ -5,6 +5,7 @@ date = "2018-12-17T23:28:00-05:00"
 tags = ["How-to", "Reddit", "API", "Python"]
 categories = ["Programming"]
 banner = "img/banners/reddit-1.jpeg"
+bannercaption = "Photo by JESHOOTS.com from Pexels"
 author = "Alp Cay"
 +++
 

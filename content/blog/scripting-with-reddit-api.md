@@ -5,6 +5,7 @@ date = "2018-12-25T20:08:24-05:00"
 tags = ["Reddit", "Python", "How-to", "API", "Script", "Web", "Parsing"]
 categories = ["Programming"]
 banner = "/img/banners/reddit-2.jpeg"
+bannercaption = "Photo by rawpixel.com from Pexels"
 author = "Alp Cay"
 +++
 
@@ -25,7 +26,7 @@ This project might be enough to trigger your [cute aggression](https://en.wikipe
 {{< img src="/img/uploads/collect.jpeg" class="lazy" caption="Collecting and filtering the data is vital for any project" figcls="pull-right img-responsive" >}}
 
 I have shown a basic introduction to Reddit API in the previous part.
-There are the steps I will follows:
+Here are 4 simple steps we will follow:
 
   1. Find subreddits related to puppies\\
      [`GET /subreddits/search`](https://www.reddit.com/dev/api#GET_search)
