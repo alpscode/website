@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "What to do for a better password security and management"
-date = "2019-01-16T21:22:45-05:00"
+date = "2019-01-27T21:22:45-05:00"
 tags = ["Security", "Python", "Script"]
 categories = ["Quick-tip"]
 banner = "/img/banners/lock.jpeg"
