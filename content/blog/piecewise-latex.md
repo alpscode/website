@@ -61,8 +61,8 @@ ymin=0
 \draw[dotted] (axis cs:\x1,\y1) -- (axis cs:0, \y1);
 \draw[dotted] (axis cs:\x2,\y2) -- (axis cs:0, \y2);
 \draw[dotted] (axis cs:\x3,\y3) -- (axis cs:0, \y3);
-\addplot[fill=white,only marks,mark=*] coordinates{(0,0)(\q1,\r2*\q1)(\q2,\r3*\q2)};
-\addplot[only marks,mark=*] coordinates{(\x1,\y1)(\x2,\y2)(\x3,\y3)};
+\addplot[only marks,mark=*] coordinates{(0,0)(\q1,\r2*\q1)(\q2,\r3*\q2)};
+\addplot[fill=white,only marks,mark=*] coordinates{(\x1,\y1)(\x2,\y2)(\x3,\y3)};
 \end{axis}
 \end{tikzpicture}
 {{< /highlight >}}
@@ -79,3 +79,4 @@ To make this work, include `\usetikzlibrary{math}` in your code after imports.
 
 See my [.tex file at GitHub](https://github.com/alpscode/notebooks/blob/master/piecewise-function/piecewise.tex) for a minimal working example.
 
+Inspired by [this answer](https://tex.stackexchange.com/a/76438/56459) at TeX StackExchange.
