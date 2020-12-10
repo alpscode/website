@@ -2,6 +2,13 @@
 <html lang="{{ .Site.LanguageCode }}">
 
   {{ partial "head.html" . }}
+  
+  {{ if .Params.css }}
+    {{ range $e := .Params.css }}
+       <link rel="stylesheet" href="{{ $e }}">
+    {{ end }}
+  {{ end }}
+  
 
   <body>
 
@@ -70,6 +77,12 @@
     <!-- /#all -->
 
     {{ partial "scripts.html" . }}
+    
+    {{ if .Params.js }}
+      {{ range $e := .Params.js }}
+        <script src="{{ $e }}"></script>
+      {{ end }}
+    {{ end }}
 
   </body>
 </html>

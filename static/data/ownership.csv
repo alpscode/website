@@ -1,0 +1,43 @@
+﻿,budget,ownership_penalty,players,objective,expected_points,total_price,own_total
+0,24,0,"Jota, Ward-Prowse, Podence, Raphinha",16.783,16.783,24,47.2
+1,24,0.5,"Jota, Ward-Prowse, Podence, Raphinha",8.491334,16.783,24,47.2
+2,24,1,"Jota, Ward-Prowse, Podence, Raphinha",0.199667,16.783,24,47.2
+3,24,5,"Son, Klich, Bissouma, Oriol Romeu",-63.483845,13.701,24,71.6
+4,24,10,"Son, Klich, Bissouma, Oriol Romeu",-140.66869,13.701,24,71.6
+5,24,50,"Son, Klich, Bissouma, Oriol Romeu",-758.14745,13.701,24,71.6
+6,28,0,"Salah, Podence, Raphinha, Soucek",18.615,18.615,28,40
+7,28,0.5,"Salah, Podence, Raphinha, Soucek",10.645573,18.615,28,40
+8,28,1,"Son, Jota, Klich, Podence",3.400003,17.494,27.4,97.1
+9,28,5,"Son, Jota, Ward-Prowse, Saka",-51.86229,17.121,27.9,104.2
+10,28,10,"Son, Grealish, Ward-Prowse, Oriol Romeu",-120.53904,15.638,27.9,115.4
+11,28,50,"Son, Grealish, Ward-Prowse, Oriol Romeu",-665.2472,15.638,27.9,115.4
+12,32,0,"Salah, Jota, Ward-Prowse, Podence",20.625,20.625,30.9,78.9
+13,32,0.5,"Salah, Jota, Ward-Prowse, Podence",13.568461,20.625,30.9,78.9
+14,32,1,"Salah, Jota, Ward-Prowse, Podence",6.511921,20.625,30.9,78.9
+15,32,5,"Son, Grealish, Rodríguez, Jota",-43.027735,17.302,31.9,149.4
+16,32,10,"Son, Grealish, Rodríguez, Jota",-103.35747,17.302,31.9,149.4
+17,32,50,"Son, Grealish, Rodríguez, Jota",-585.99535,17.302,31.9,149.4
+18,36,0,"Salah, Aubameyang, Ward-Prowse, Podence",21.795,21.795,35.4,58.5
+19,36,0.5,"Salah, Son, Jota, Ward-Prowse",15.792119,21.486,35,134
+20,36,1,"Salah, Son, Jota, Ward-Prowse",10.098238,21.486,35,134
+21,36,5,"Salah, Son, Jota, Ward-Prowse",-35.45281,21.486,35,134
+22,36,10,"Salah, Son, Grealish, Ward-Prowse",-91.7032,20.754,35.7,143.1
+23,36,50,"Salah, Son, Grealish, Ward-Prowse",-541.532,20.754,35.7,143.1
+24,40,0,"Salah, Aubameyang, Son, Ward-Prowse",22.656,22.656,39.5,113.6
+25,40,0.5,"Salah, Aubameyang, Son, Ward-Prowse",16.538729,22.656,39.5,113.6
+26,40,1,"Salah, Son, Grealish, Jota",10.861815,21.273,36.5,159.4
+27,40,5,"Salah, Son, Grealish, Jota",-30.782925,21.273,36.5,159.4
+28,40,10,"Salah, Son, Grealish, Jota",-82.83885,21.273,36.5,159.4
+29,40,50,"Salah, Fernandes, Son, Jota",-498.95735,21.095,39.7,161.5
+30,44,0,"Salah, Mané, Aubameyang, Jota",24.09,24.09,42.8,80.9
+31,44,0.5,"Salah, Aubameyang, Son, Jota",17.474996,23.175,40.3,129.9
+32,44,1,"Salah, Aubameyang, Son, Jota",11.774993,23.175,40.3,129.9
+33,44,5,"Salah, Son, Grealish, Jota",-30.782925,21.273,36.5,159.4
+34,44,10,"Salah, Fernandes, Son, Grealish",-82.22705,20.363,40.4,170.6
+35,44,50,"Salah, Fernandes, Son, Grealish",-492.58725,20.363,40.4,170.6
+36,48,0,"Salah, Mané, De Bruyne, Aubameyang",24.375,24.375,47.6,75.2
+37,48,0.5,"Salah, Mané, Aubameyang, Son",18.170067,24.293,45.3,109.6
+38,48,1,"Salah, Mané, Aubameyang, Son",12.047133,24.293,45.3,109.6
+39,48,5,"Salah, Son, Grealish, Jota",-30.782925,21.273,36.5,159.4
+40,48,10,"Salah, Fernandes, Son, Grealish",-82.22705,20.363,40.4,170.6
+41,48,50,"Salah, Fernandes, Son, Grealish",-492.58725,20.363,40.4,170.6

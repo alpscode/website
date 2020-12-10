@@ -54,6 +54,8 @@ The last step of the analytics is what we call *prescriptive*, and the most comm
 Before we go back to our original discussion about joining the bandwagons, let us define a simple problem to see why *optimization is a great decision support tool* you should be using.
 Using [FPL Review](https://fplreview.com/)'s estimated values for GW12 (as of 2020-12-08), let us try to pick 4 midfield players under a certain budget to maximize our expected FPL points.
 
+Expected points of midfield players this GW are as follows:
+
 <div class="embed-table">
 
 | id  | name           | team\_name     | selected\_by\_percent | price | xP     |
@@ -335,7 +337,7 @@ $(document).ready( function () {
 ## Combining Math and Intuition
 
 Analytics methods, including optimization, become powerful weapons at the hands of an expert.
-If you have an intuition about a partical subject, say FPL, then running these kind of analysis can only make you a better player.
+If you have an intuition about a particular subject, say FPL, then running these kind of analysis can only make you a better player.
 Too often we have to simplify our decisions to "should I buy X and Y, or Z and W?" in the game.
 There are too many options out there, and we are trying to reduce our options to 2 or 3 when giving a final decision.
 Often, this is what happens when you are making other decisions, like buying a car or choosing a new phone, too.
@@ -389,173 +391,38 @@ Here is how the optimal solution changes:
 <div id="plot3"></div>
 
 <script type="text/javascript">
-$(document).ready(function() {
-
-    // set the dimensions and margins of the graph
-    var margin = { top: 80, right: 25, bottom: 30, left: 40 },
-        width = 600 - margin.left - margin.right,
-        height = 700 - margin.top - margin.bottom;
-    
-    // append the svg object to the body of the page
-    var svg = d3.select("#plot3")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
-    
-    function rowClean(d) {
-    	return {
-    		budget: +d.budget,
-    		ownership_penalty: +d.ownership_penalty,
-    		players: d.players,
-    		objective: +d.objective,
-    		total_price: +d.total_price,
-    		expected_points: +d.expected_points
-    	};
-    }
-    
-    //Read the data
-    //d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv")
-    d3.csv("/data/ownership.csv", rowClean)
-    	.then(function(data) {
-    	debugger;
-        // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
-        var myGroups = data.map(e => e.ownership_penalty);
-        var myVars = data.map(e => e.budget);
-        console.log(myGroups);
-    
-        // Build X scales and axis:
-        let x = d3.scaleBand()
-            .range([0, width])
-            .domain(myGroups);
-        x.padding(0.05);
-        svg.append("g")
-            .style("font-size", 15)
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x).tickSize(0))
-            .select(".domain").remove()
-    
-        // Build Y scales and axis:
-        let y = d3.scaleBand()
-            .range([height, 0])
-            .domain(myVars);
-        y.padding(0.05);
-        svg.append("g")
-            .style("font-size", 15)
-            .call(d3.axisLeft(y).tickSize(0))
-            .select(".domain").remove()
-    
-        // Build color scale
-        var myColor = d3.scaleSequential()
-            //.interpolator(d3.interpolateYlGnBu)
-            .interpolator(d3.interpolateMagma)
-            .domain([15, 25])
-    
-        // create a tooltip
-        var tooltip = d3.select("body")
-            .append("div")
-            .style("opacity", 0)
-            .attr("class", "tooltip-p3")
-            .style("position", "absolute")
-            .style("background-color", "white")
-            .style("border", "solid")
-            .style("border-width", "2px")
-            .style("border-radius", "5px")
-            .style("padding", "5px")
-    
-        // Three function that change the tooltip when user hover / move / leave a cell
-        var mouseover = function(d) {
-            tooltip.style("opacity", 1)
-            d3.select(this)
-                .style("stroke", "black")
-                .style("opacity", 1)
-        }
-        var mousemove = function(d) {
-        	//debugger;
-            tooltip
-                .html("Budget: £" + d.target.dataset.budget + "M<br/>Weight: " + d.target.dataset.weight)
-                //.style("left", (d3.pointer(this)[0] + 70) + "px")
-                .style("left", (d.pageX + 25) + "px")
-                .style("top", (d.pageY + 25) + "px")
-        }
-        var mouseleave = function(d) {
-            tooltip.style("opacity", 0)
-            d3.select(this)
-                .style("stroke", "none")
-                .style("opacity", 0.8)
-        }
-        
-        debugger;
-    
-        // add the squares
-        svg.selectAll()
-            .data(data, function(d) { return d; })
-            .enter()
-            .append("rect")
-            .attr("data-budget", function(d) { return d.budget; })
-            .attr("data-weight", function(d) { return d.ownership_penalty; })
-            .attr("x", function(d) { return x(d.ownership_penalty); })
-            .attr("y", function(d) { return y(d.budget); })
-            .attr("rx", 4)
-            .attr("ry", 4)
-            .attr("width", x.bandwidth())
-            .attr("height", y.bandwidth())
-            .style("fill", function(d) { return myColor(d.expected_points) })
-            .style("stroke-width", 4)
-            .style("stroke", "none")
-            .style("opacity", 0.8)
-            .on("mouseover", mouseover)
-            .on("mousemove", mousemove)
-            .on("mouseleave", mouseleave)
-        
-        e1 = svg.selectAll()
-            .data(data, function(d) { return d; })
-            .enter()
-            .append("g")
-            .attr("transform", function(d) { return "translate(" + x(d.ownership_penalty) +","+ y(d.budget) + ")"; });
-    
-        e2 = e1.append("text")
-            .attr("x", x.bandwidth()/2)
-            .attr("y", y.bandwidth()/2)
-            .attr("text-anchor", "middle")
-            .attr("pointer-events", "none")
-            .attr("fill", "white")
-            .attr("alignment-baseline", "middle");
-        e2.append("tspan")
-        	.text(function(d) {return d.expected_points}).attr("font-size", "12pt");
-        e2.append("tspan")
-        	.attr("x", 0)
-        	.attr("dy", "1.2em")
-        	.attr("max-width", x.bandwidth())
-        	.attr("display", "block")
-        	.attr("font-size", "8pt")
-        	.attr("textLength", 120)
-        	.text(function(d) { return d.players; });
-            
-    })
-    
-    // Add title to graph
-    svg.append("text")
-        .attr("x", 0)
-        .attr("y", -50)
-        .attr("text-anchor", "left")
-        .style("font-size", "22px")
-        .text("Expected points for best 4 midfield picks");
-    
-    // Add subtitle to graph
-    svg.append("text")
-        .attr("x", 0)
-        .attr("y", -20)
-        .attr("text-anchor", "left")
-        .style("font-size", "14px")
-        .style("fill", "grey")
-        .style("max-width", 400)
-        .text("Expected xP decreases as we work with limited budget and follow the trend.");
-
-});
+$(document).ready(function(){var t=80,e=25,a=40,n=40,r=650-n-e,o=750-t-a,d=d3.select("#plot3").append("svg").attr("width",r+n+e).attr("height",o+t+a).attr("class","pull-center").style("display","block").append("g").attr("transform","translate("+n+","+t+")");d3.csv("/data/ownership.csv",function(t){return{budget:+t.budget,ownership_penalty:+t.ownership_penalty,players:t.players,objective:+t.objective,total_price:+t.total_price,expected_points:+t.expected_points}}).then(function(t){var e=t.map(t=>t.ownership_penalty),a=t.map(t=>t.budget);console.log(e);let n=d3.scaleBand().range([0,r]).domain(e);n.padding(.05),d.append("g").style("font-size",15).attr("transform","translate(0,"+o+")").call(d3.axisBottom(n).tickSize(0)).select(".domain").remove();let i=d3.scaleBand().range([o,0]).domain(a);i.padding(.05),d.append("g").style("font-size",15).call(d3.axisLeft(i).tickSize(0)).select(".domain").remove();var l=d3.scaleSequential().interpolator(d3.interpolateMagma).domain([15,24]),s=d3.scaleLinear().domain([15,20]).interpolate(d3.interpolateHcl).range([d3.rgb("#FFFFFF"),d3.rgb("#000000"),d3.rgb("#FFFFFF")]),p=d3.select("body").append("div").style("opacity",0).attr("class","tooltip-p3").style("position","absolute").style("background-color","white").style("border","solid").style("border-width","2px").style("border-radius","5px").style("padding","5px");d.selectAll().data(t,function(t){return t}).enter().append("rect").attr("data-budget",function(t){return t.budget}).attr("data-weight",function(t){return t.ownership_penalty}).attr("x",function(t){return n(t.ownership_penalty)}).attr("y",function(t){return i(t.budget)}).attr("rx",4).attr("ry",4).attr("width",n.bandwidth()).attr("height",i.bandwidth()).style("fill",function(t){return l(t.expected_points)}).style("stroke-width",4).style("stroke","none").style("opacity",.8).on("mouseover",function(t){p.style("opacity",1),d3.select(this).style("stroke","black").style("opacity",1)}).on("mousemove",function(t){p.html("Budget: £"+t.target.dataset.budget+"M<br/>Weight: "+t.target.dataset.weight).style("left",t.pageX+25+"px").style("top",t.pageY+25+"px")}).on("mouseleave",function(t){p.style("opacity",0),d3.select(this).style("stroke","none").style("opacity",.8)}),e1=d.selectAll().data(t,function(t){return t}).enter().append("g").attr("transform",function(t){return"translate("+n(t.ownership_penalty)+","+i(t.budget)+")"}),e2=e1.append("text").attr("x",n.bandwidth()/2).attr("y",i.bandwidth()/2).attr("text-anchor","middle").attr("alignment-baseline","middle").attr("pointer-events","none").style("fill",function(t){return s(t.expected_points)}),e2.append("tspan").attr("dx",0).attr("dy","-1em").text(function(t){return t.expected_points}).attr("font-size","13pt"),e2.selectAll().data(function(t){return t.players.split(",")}).enter().append("tspan").attr("text-anchor","middle").attr("x",n.bandwidth()/2).attr("dy","1.2em").attr("font-size","8pt").text(function(t,e){return t})}),d.append("text").attr("x",0).attr("y",-50).attr("text-anchor","left").style("font-size","22px").text("Expected points for optimal 4 MF picks"),d.append("text").attr("x",0).attr("y",-20).attr("text-anchor","left").style("font-size","14px").style("fill","grey").style("max-width",400).text("Expected xP decreases if the budget goes down or the player follows the trend."),d.append("text").attr("text-anchor","middle").attr("transform","rotate(-90)").attr("y",10-n).attr("x",-o/2).text("Budget (M)"),d.append("text").attr("text-anchor","middle").attr("y",o+35).attr("x",r/2).text("Ownership Penalty Weight")});
 </script>
+
+On the other side of the coin, our squad gets closer to the "template".
+This means our decision is more "passive" as we will less likely to get affected by wild swings.
+
+<div id="plot4"></div>
+
+<script type="text/javascript">
+$(document).ready(function(){var t=80,e=25,a=40,n=40,r=650-n-e,o=750-t-a,l=d3.select("#plot4").append("svg").attr("width",r+n+e).attr("height",o+t+a).attr("class","pull-center").style("display","block").append("g").attr("transform","translate("+n+","+t+")");d3.csv("/data/ownership.csv",function(t){return{budget:+t.budget,ownership_penalty:+t.ownership_penalty,players:t.players,objective:+t.objective,total_price:+t.total_price,expected_points:+t.expected_points,own_total:+t.own_total}}).then(function(t){var e=t.map(t=>t.ownership_penalty),a=t.map(t=>t.budget);console.log(e);let n=d3.scaleBand().range([0,r]).domain(e);n.padding(.05),l.append("g").style("font-size",15).attr("transform","translate(0,"+o+")").call(d3.axisBottom(n).tickSize(0)).select(".domain").remove();let i=d3.scaleBand().range([o,0]).domain(a);i.padding(.05),l.append("g").style("font-size",15).call(d3.axisLeft(i).tickSize(0)).select(".domain").remove();var d=d3.scaleSequential().interpolator(d3.interpolateMagma).domain([45,180]),s=d3.scaleLinear().domain([80,95]).interpolate(d3.interpolateHcl).range([d3.rgb("#FFFFFF"),d3.rgb("#000000"),d3.rgb("#FFFFFF")]),p=d3.select("body").append("div").style("opacity",0).attr("class","tooltip-p3").style("position","absolute").style("background-color","white").style("border","solid").style("border-width","2px").style("border-radius","5px").style("padding","5px");l.selectAll().data(t,function(t){return t}).enter().append("rect").attr("data-budget",function(t){return t.budget}).attr("data-weight",function(t){return t.ownership_penalty}).attr("x",function(t){return n(t.ownership_penalty)}).attr("y",function(t){return i(t.budget)}).attr("rx",4).attr("ry",4).attr("width",n.bandwidth()).attr("height",i.bandwidth()).style("fill",function(t){return d(t.own_total)}).style("stroke-width",4).style("stroke","none").style("opacity",.8).on("mouseover",function(t){p.style("opacity",1),d3.select(this).style("stroke","black").style("opacity",1)}).on("mousemove",function(t){p.html("Budget: £"+t.target.dataset.budget+"M<br/>Weight: "+t.target.dataset.weight).style("left",t.pageX+25+"px").style("top",t.pageY+25+"px")}).on("mouseleave",function(t){p.style("opacity",0),d3.select(this).style("stroke","none").style("opacity",.8)}),e1=l.selectAll().data(t,function(t){return t}).enter().append("g").attr("transform",function(t){return"translate("+n(t.ownership_penalty)+","+i(t.budget)+")"}),e2=e1.append("text").attr("x",n.bandwidth()/2).attr("y",i.bandwidth()/2).attr("text-anchor","middle").attr("alignment-baseline","middle").attr("pointer-events","none").style("fill",function(t){return s(t.own_total)}),e2.append("tspan").attr("dx",0).attr("dy","-1em").text(function(t){return t.own_total+"%"}).attr("font-size","13pt"),e2.selectAll().data(function(t){return t.players.split(",")}).enter().append("tspan").attr("text-anchor","middle").attr("x",n.bandwidth()/2).attr("dy","1.2em").attr("font-size","8pt").text(function(t,e){return t})}),l.append("text").attr("x",0).attr("y",-50).attr("text-anchor","left").style("font-size","22px").text("Ownership total for optimal 4 MF picks"),l.append("text").attr("x",0).attr("y",-20).attr("text-anchor","left").style("font-size","14px").style("fill","grey").style("max-width",400).text("Optimal picks get closer to common picks at the expense of xP."),l.append("text").attr("text-anchor","middle").attr("transform","rotate(-90)").attr("y",10-n).attr("x",-o/2).text("Budget (M)"),l.append("text").attr("text-anchor","middle").attr("y",o+35).attr("x",r/2).text("Ownership Penalty Weight")});
+</script>
+
+Here, where your expertise should come into play.
+Depending on your current rank, you might want to play it safe, and go for a moderate or very passive approach.
+If you are in need for a good jump in your rank, you can take the risk and pick the "differentials".
+
+---
+
+**If you are going to remember 2 things from this post, remember these:**
+1. **Optimization is a great tool that you should have under your belt to gain an edge in FPL.**
+2. **It is not surprising that more money gives you more expected points. However, it is equally important to trust your own instincts. As you get closer to template, you are playing it safe, meaning that you will probably stuck with your current rank.**
+
+## What's next?
+
+While you are here, let me point out that I am keeping a website for those wondering what is at the end of the spectrum.
+"FPL Optimized" as I call it gives you the best 11 and squad picks for the week, purely on expected points from FPL Review, every day:
+
+https://sertalpbilal.github.io/fpl_optimized/
+
+Quite a bit number of FPL websites claim they do "optimization", but most of the time they are simplifying and approximating without actual mathematical optimization, as it tends to be computationally expensive.
+If FPL community is interested, next time I can write about ways to run optimization on tools you commonly use, such as MS Excel or Python with open-source packages.
+Until next time, I wish all of you luck!
 
 
 [^1]: I'm reading Chris Anderson and David Sally's book "The Number Game" nowadays. It is a great book that I strongly suggest.

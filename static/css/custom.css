@@ -162,3 +162,25 @@ a.navbar-brand.home {
 .capitalize {
   text-transform: capitalize;
 }
+
+figure > img {
+    padding: 10px;
+}
+
+.embed-table {
+    border:1px solid green;
+    padding: 12px;
+    margin: 8px 0px;
+}
+
+.plot-tooltip {
+    position: absolute;
+    text-align: center;
+    padding: .2rem;
+    background: #313639;
+    color: #f9f9f9;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    // -size: .7rem;
+}
