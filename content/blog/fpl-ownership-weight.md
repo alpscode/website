@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "On FPL, Optimization, and Ownership Weights"
-date = "2020-12-10T01:30:00-05:00"
+date = "2020-12-09T12:30:00-05:00"
 tags = ["FPL", "optimization", "soccer", "analytics", "math"]
 categories = ["optimization"]
 banner = "/img/banners/pexels-pixabay-235990.jpg"
