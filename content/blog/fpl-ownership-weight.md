@@ -14,7 +14,7 @@ unsafe= true
 
 +++
 
-Roberto Cialdini mentions _scarcity_ as one of the 6 principles of persuasion. 
+Robert Cialdini mentions _scarcity_ as one of the 6 principles of persuasion. 
 The nature of seeking something of great interest is embedded inside all of us.
 Our first reaction when we see other people do something is to follow them.
 Even though it does not make too much sense, we follow the herd even in a competitive game, like Fantasy Premier League.
