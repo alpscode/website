@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "On FPL, Optimization, and Ownership Weights"
-date = "2020-12-08T21:13:00-05:00"
+date = "2020-12-10T01:30:00-05:00"
 tags = ["FPL", "optimization", "soccer", "analytics", "math"]
 categories = ["optimization"]
 banner = "/img/banners/pexels-pixabay-235990.jpg"
@@ -22,8 +22,9 @@ Even though it does not make too much sense, we follow the herd even in a compet
 Last week's (GW11) unfortunate gold rush to Jota proved that we fear being left out.
 Of course the potential price changes further trigger and support our knee-jerk reactions, however it is important to separate what we want to do and **feel forced** to do.
 
-This topic is of great interest to me right now, because I am at the other end of the spectrum: I am religiously following the results of my optimization model.
-Up until now, I never thought of considering what other people are doing, but it made sense to me.
+This topic is of great interest to me right now, because I am at the other end of the spectrum: 
+I am religiously following the results of my optimization model this season.
+Up until now, I never thought of including what other people are doing into my model, but it suddenly made sense to me.
 Perhaps our cognitive tendencies have something that I can benefit even in a purely mathematical model.
 
 ## Analytics in FPL
@@ -41,7 +42,7 @@ You might be skeptical about whether analytics and data alone can solve the prob
 It depends how you look at it, but **I do not think analytics and data have all the answers**.
 However, **they paves the road for well informed decisions** like many sectors have been using for years.
 
-Many of the players are well aware of how to use basic tools and follow fixture difficulty ratings.
+Many of the managers are well aware of how to use basic tools and follow fixture difficulty ratings.
 After many hours of work, most of the time we end up with a prediction of what will happen next gameweek, however it might be away from the fact.
 Then, the question becomes: given this information, what is my best strategy?
 It is easy get overwhelmed with decisions, hence oversimplifying the most important step of the puzzle: decision-making.
@@ -337,14 +338,14 @@ $(document).ready( function () {
 ## Combining Math and Intuition
 
 Analytics methods, including optimization, become powerful weapons at the hands of an expert.
-If you have an intuition about a particular subject, say FPL, then running these kind of analysis can only make you a better player.
+If you have an intuition about a particular subject, say FPL, then running these kind of analysis can only make you a better manager.
 Too often we have to simplify our decisions to "should I buy X and Y, or Z and W?" in the game.
 There are too many options out there, and we are trying to reduce our options to 2 or 3 when giving a final decision.
 Often, this is what happens when you are making other decisions, like buying a car or choosing a new phone, too.
 Since it is much better to use the correct tool at correct task, **optimization can help us to find hidden insights**.
 
 Let me go back to the original discussion.
-What if there is something other players know and you don't?
+What if there is something other managers know and you don't?
 
 Suppose you are running an optimization already like I mentioned, but do not think Aubameyang is the right choice when you have only £36M to spend on 4 midfield players.
 Why is that?
@@ -365,15 +366,15 @@ You can calculate the points difference as
 
 In this one, denote `opp` as a binary multiplier whether your opponent has the player `e` or not.
 
-For a second, assume all FPL players are against you!
-And let us combine all of them into a single boss you need to defeat :)
+For a second, assume all FPL managers are united against you!
+Imagine them as single boss you need to defeat :)
 The objective can now be written as
 
 <div>$$ \sum_{e \in E} \text{pick}_e \cdot \text{xP}_e - \sum_{e \in E}(1-\text{pick}_e) \cdot \text{own}_e \cdot \text{xP}_e$$</div>
 
 The second term here becomes how much you are being penalized compared to other players. Here, `own` is the percentage ownership of a player.
-At the extreme, if no one has a player then you cannot lose anything by not choosing him.
-At the other extreme, if everyone has a player and you do not, you are going to be at a disadvantage as much as `xP` of that particular player.[^mo]
+At the extreme, if no one has a particular player, then you cannot lose anything by not choosing him.
+At the other extreme, if everyone has a player and you don't, you are going to be at a disadvantage as much as `xP` of that particular player.[^mo]
 
 ## Deciding strategy
 
@@ -381,10 +382,10 @@ The final piece of the puzzle is to re-running optimization model with this obje
 This means that the optimization algorithm will bring you closer to what is called **template** as much as possible.
 
 Instead of running it directly, let us put a weight parameter for how much you believe other managers know the game.
-Value 0 means that you do not consider other players at all, so you have no faith on others.
-Value 1 means that you value their opinions as much as your predictions for this week.
-A significantly higher value means you value their opinions more than your own predictions for the week.
-So at the end of the spectrum, you can play the GW really aggressive (weight=0) or really passive and safe (weight \>\> 1)[^neg]
+- Weight=0 means that you don't value other manager's picks at all, so you have no faith on others.
+- Weight=1 means that you value their opinions as much as your predictions for this week.
+- A significantly higher value means you value their opinions more than your own predictions for the week.
+You can play the GW really aggressive (weight=0) or really passive and safe (weight \>\> 1)[^neg]
 
 Here is how the optimal solution changes:
 
@@ -405,23 +406,26 @@ $(document).ready(function(){var t=80,e=25,a=40,n=40,r=650-n-e,o=750-t-a,l=d3.se
 
 Here, where your expertise should come into play.
 Depending on your current rank, you might want to play it safe, and go for a moderate or very passive approach.
+Instead of overall ownership, you can use ownership ratios of top 1000 players, or your FPL mini-league, depending on what you are trying to achieve.
 If you are in need for a good jump in your rank, you can take the risk and pick the "differentials".
+Of course if you fall, you might fall hard.
 
 ---
 
 **If you are going to remember 2 things from this post, remember these:**
 1. **Optimization is a great tool that you should have under your belt to gain an edge in FPL.**
-2. **It is not surprising that more money gives you more expected points. However, it is equally important to trust your own instincts. As you get closer to template, you are playing it safe, meaning that you will probably stuck with your current rank.**
+2. **It is not surprising that more budget gives you more freedom, hence expected points. However, it is equally important to trust your own instincts. As you get closer to template, you are playing it safe, meaning that you will probably stuck with your current rank.**
 
 ## What's next?
 
-While you are here, let me point out that I am keeping a website for those wondering what is at the end of the spectrum.
-"FPL Optimized" as I call it gives you the best 11 and squad picks for the week, purely on expected points from FPL Review, every day:
+While you are here, let me point out that I'm keeping a website for those wondering what is at the end of the spectrum.
+"FPL Optimized" (as I call it) gives you the best 11 and squad picks for the week, purely on expected points from FPL Review, updated every day:
 
 https://sertalpbilal.github.io/fpl_optimized/
 
-Quite a bit number of FPL websites claim they do "optimization", but most of the time they are simplifying and approximating without actual mathematical optimization, as it tends to be computationally expensive.
-If FPL community is interested, next time I can write about ways to run optimization on tools you commonly use, such as MS Excel or Python with open-source packages.
+A final note: Quite a bit number of FPL websites claim they do "optimization", but most of the time they are simplifying and approximating without actual mathematical optimization behind, as it tends to be computationally expensive.
+If FPL community is interested, next time I can write about ways to run mathematical optimization on tools you commonly use, such as MS Excel or Python with open-source packages.
+
 Until next time, I wish all of you luck!
 
 
