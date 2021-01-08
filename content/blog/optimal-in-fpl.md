@@ -454,7 +454,7 @@ It indicates that my opponent goes for highly owned players more than I do.
 
 Since it's my first season in FPL, I'm not 100% sure what brings success in long-term, but I'm sure stable performance is quite important.
 Sudden jumps is not sustainable for obvious reasons.
-Another issue is that we only know the ownership rates for the current GW, so planning a few weeks in advence is tricky.
+Another issue is that we only know the ownership rates for the current GW, so planning a few weeks in advance is tricky.
 
 That's why my optimization model focuses on total points for the planning horizon (8 gameweeks based on [FPL Review data](https://fplreview.com)).
 I also keep an eye on ownership rates to see how much risk I'm taking.
