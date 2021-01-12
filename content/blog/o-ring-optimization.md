@@ -1,7 +1,7 @@
 +++
 draft = false
 title = "O-Ring Optimization for FPL"
-date = "2021-01-12T10:00:00-04:00"
+date = "2021-01-12T11:30:00-04:00"
 tags = ["FPL", "optimization", "analytics", "math"]
 categories = ["optimization"]
 banner = "/img/banners/pexels-pixabay-73871.jpg"
@@ -15,7 +15,7 @@ The book covers a wide range of events where numbers give insights to football p
 I have recently read the section about the "O-Ring theory", which brought a couple of new ideas regarding FPL.
 
 *O-Ring theory* says that a team (or a system) is as strong as its weakest link.
-The idea itself is coming from the Space Shuttle *Challenger*, where the failure of O-ring seals caused the [catastrophic event in 1986](https://en.wikipedia.org/wiki/Space_Shuttle_Challenger).
+The idea itself is coming from the Space Shuttle *Challenger*, where the failure of O-ring seals caused the [catastrophic event in 1986](https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster).
 When applied to football, the theory points out that clubs should be improving (or replacing) their weakest players in the field, instead of focusing on superstars.
 
 I have been talking about applying optimization to FPL for a while now, but this theory brings a whole new aspect to it.
@@ -31,7 +31,7 @@ Before we go into details of the O-Ring model, let me point out the paper "Testi
 The paper concludes that the superstar theory is more effective than the O-Ring theory based on their study on EPL.
 This might be the case for FPL as well, but the following models can still give you new ideas to improve your own models.
 
-Quick note, mathematical details regarding following models are placed at the bottom of the post.
+Quick note, mathematical details regarding following models are placed [at the bottom of the post](#technical-details).
 
 In a typical FPL optimization model, our aim is to maximize the expected points (xP).
 You are simply choosing 11 players out of over 600 players that will maximize your total xP.
@@ -51,7 +51,7 @@ The main logic of the O-Ring model is to assess a team with is worst player.
 In this case, the worst player we have on the field is Pope -- 4.04 xP.
 
 In order to improve this lineup, suppose that you have decided to iterate over all the goalkeepers and found Lloris with 4.21 xP.
-For the replacement, you need to check if you have enough budget for this move.
+For the replacement, you need to check if you have enough budget.
 Since GK is no longer the weakest link, you can focus the next one: Maguire with 4.10 xP.
 You can iterate defenders, or maybe drop Maguire and get a midfield or perhaps a forward from the bench.
 It should be obvious that the problem quickly spirals out of control.
@@ -261,13 +261,13 @@ Our total xP allocation for each position is as follows:
 | -------- | ----: | -----: | -----: | -----: |
 | 53.448   | 4.218 | 14.059 | 21.390 | 13.781 |
 
-Look at the total xP of MD and the FW.
+Notice the total xP of MD and FW positions.
 The lineup still feels unbalanced, even though we improved the weakest link.
 This one is not unbalanced because of the formation (3-4-3 is quite balanced) but in terms of where we are expecting our points from.
 We are expecting 21 points from midfields, while only 14 from forwards.
 
 So what if we try to increase our FW expected points by dropping one of our premium midfields and upgrade one of our forwards.
-We have another O-Ring model, but this time we are maximizing the minimum total of each position (excluding GK).
+We have another O-Ring model, but this time we are maximizing the minimum among total xPs of each position (excluding GK).
 The objective is to "maximize the minimum among total positional xP values".
 We need to use the 2-stage optimization again as I have mentioned:
 1. Maximize the minimum of position xP totals (DF, MD, FW)
@@ -521,15 +521,24 @@ It is time to list all the models we have seen for comparison purposes.
 There is no clear winner, so it is up to your personal taste.
 I think Positional O-Ring is pretty promising.
 
-I am **not** currently using any of these models for my own decision making (I stick to multi-period base model for now), but it is possible that I will give Positional O-Ring a try.
-Certainly, it will produce a suboptimal solution where I will lose a bit of an xP, but it might be small enough to justify for having a balanced lineup.
-These models will be pretty handy when I use my WC somewhere down the line.
+I have decided to put my FPL lineup where my mouth is.
+My regular FPL model is a multi-period variant of the base model, but I have used Positional O-Ring for GW18 inside a 3-step process for the FH chip.
+I switched from having an unbalanced 21/19/13 xP (5-3-2) to 17/17/18 (4-3-3) which decreased the overall xP by about 2 points.
+I'm curious to see if it will be a successful experiment.
+
+{{< img src="/img/uploads/fpl_gw18_squad.png"  figcls="img-responsive" class="lazy">}}
+
+I'm not sure how I'll proceed for the rest of the season.
+Positional O-Ring produces a suboptimal solution where I have to lose a bit of an xP, but I can keep using it if the difference is small enough.
+These models will be especially useful when I use my WC somewhere down the line.
 
 It was an interesting exercise.
+I could add some of these models (and their daily solutions) to FPL Optimized's "[Optimal Squads](https://sertalpbilal.github.io/fpl_optimized/week.html)" page if anyone is interested.
+I am open to any feedback or suggestions.
 
 ---
 
-## Techical Details
+## Technical Details
 
 Our base FPL Model maximizes the expected points, as follows:
 
@@ -589,6 +598,6 @@ See my source code and how I solve these problems using sasoptpy and CBC on [Git
 
 [^TNG]: Anderson, Christopher, and David Sally. The numbers game: Why everything you know about soccer is wrong. Penguin, 2013. [(Amazon Link)](https://www.amazon.com/Numbers-Game-Everything-About-Soccer/dp/0143124560)
 [^O-Ring]: Szymanski, Stefan, and Guy Wilkinson. "Testing the O-Ring theory using data from the English Premier League." Research in Economics 70.3 (2016): 468-481. [(Science Direct Link)](https://www.sciencedirect.com/science/article/pii/S1090944316300904)
-[^FPLOpt]: You can find daily optimal lineups at [FPL Optimized](https://sertalpbilal.github.io/fpl_optimized/week.html). Previous weeks are available, too.
+[^FPLOpt]: Optimal lineups/squads at [FPL Optimized](https://sertalpbilal.github.io/fpl_optimized/week.html) are generated 4 times everyday. You can go back in time and check old optimals.
 [^Multiobj]: I have mentioned multiobjective optimization in the previous post, as well.
              In that one we have used "weighted-sum method".
