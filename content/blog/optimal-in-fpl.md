@@ -7,7 +7,7 @@ categories = ["optimization"]
 banner = "/img/banners/optimization_arrow.jpg"
 bannercaption = "Photo by Jens Johnsson from Pexels"
 author = "Alp Cay"
-js = ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML", "https://d3js.org/d3.v6.min.js"]
+js = ["https://d3js.org/d3.v6.min.js"]
 +++
 
 The amount of available content for Fantasy Premier League (FPL) is unbelivable and hard to follow.
@@ -44,15 +44,6 @@ You and 40% of all FPL managers will get 8 points. 60% will get 0 out of him.
 The average benefit you get is the difference between your gain and your loss.
 There is no loss to you in this case, but 40% of players will get the same benefit as you do, which will reduce your relative gain.
 The average that Salah will bring to FPL managers is (overall average):
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
 
 $$
 8 \cdot \frac{40}{100} - 0 \cdot \frac{60}{100} = 3.2
