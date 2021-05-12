@@ -165,7 +165,11 @@ The total points this model accumulated is... (drum roll please)...
 So, it was technically possible for someone to finish 2019/2020 season with 4984 points.
 If you voted on the Twitter poll I ran earlier, the answer to the first question was C (third popular choice!).
 
-{{< tweet 1392138554994839552 >}}
+<p align="center">
+<a href="https://twitter.com/sertalpbilal/status/1392138554994839552"><img src="/img/tweets/poll1.png" /></a>
+</p>
+
+<!-- {{< tweet 1392138554994839552 >}} -->
 
 You can find the full solution on [GitHub](https://github.com/sertalpbilal/fpl_hindsight_optimization/blob/main/results/2019-20/final_solution_1.csv).
 
@@ -846,7 +850,11 @@ Unless there is a problem with input data, this solution is the best one can get
 
 In this case, the correct answer to my poll was D, around 3200 (Again, the 3rd popular choice)
 
-{{< tweet 1392138556152418311 >}}
+<!-- {{< tweet 1392138556152418311 >}} -->
+
+<p align="center">
+<a href="https://twitter.com/sertalpbilal/status/1392138556152418311"><img src="/img/tweets/poll2.png" /></a>
+</p>
 
 The solution is available on [GitHub](https://github.com/sertalpbilal/fpl_hindsight_optimization/blob/main/results/2019-20/final_solution_3.csv).
 
@@ -906,7 +914,11 @@ The solver returned the following optimal squad and uses Bench Boost chip in GW1
 So, the final answer to my poll was... B! This answer was the least popular choice.
 I would be curious to find out how the auto-sub & vice-captain points would change the result, though.
 
-{{< tweet 1392138557268107269 >}}
+<!-- {{< tweet 1392138557268107269 >}} -->
+
+<p align="center">
+<a href="https://twitter.com/sertalpbilal/status/1392138557268107269"><img src="/img/tweets/poll3.png" /></a>
+</p>
 
 Again, the solution is available on [GitHub](https://github.com/sertalpbilal/fpl_hindsight_optimization/blob/main/results/2019-20/final_solution_4.csv) in CSV format if you want to have a look.
 
