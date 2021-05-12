@@ -10,7 +10,7 @@ author = "Alp Cay"
 js = ["https://d3js.org/d3.v6.min.js", "https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"]
 +++
 
-This season certainly proved how random FPL could get, full difficult decisions regret.
+This season certainly proved how random FPL could get, full of difficult decisions and regret.
 Every GW, we'd look at our team and wish that we'd that shiny player everyone else had.
 Sometimes Bruno, sometimes Gundogan, and sometimes Martinez.
 Week after week we were filled with regret after not buying (or worse: benching) that player.
