@@ -166,7 +166,7 @@ So, it was technically possible for someone to finish 2019/2020 season with 4984
 If you voted on the Twitter poll I ran earlier, the answer to the first question was C (third popular choice!).
 
 <p align="center">
-<a href="https://twitter.com/sertalpbilal/status/1392138554994839552"><img src="/img/tweets/poll1.png" /></a>
+<a href="https://twitter.com/sertalpbilal/status/1392138554994839552"><img src="/img/tweets/poll1.png" class="img-responsive" /></a>
 </p>
 
 <!-- {{< tweet 1392138554994839552 >}} -->
@@ -853,7 +853,7 @@ In this case, the correct answer to my poll was D, around 3200 (Again, the 3rd p
 <!-- {{< tweet 1392138556152418311 >}} -->
 
 <p align="center">
-<a href="https://twitter.com/sertalpbilal/status/1392138556152418311"><img src="/img/tweets/poll2.png" /></a>
+<a href="https://twitter.com/sertalpbilal/status/1392138556152418311"><img src="/img/tweets/poll2.png" class="img-responsive" /></a>
 </p>
 
 The solution is available on [GitHub](https://github.com/sertalpbilal/fpl_hindsight_optimization/blob/main/results/2019-20/final_solution_3.csv).
@@ -917,7 +917,7 @@ I would be curious to find out how the auto-sub & vice-captain points would chan
 <!-- {{< tweet 1392138557268107269 >}} -->
 
 <p align="center">
-<a href="https://twitter.com/sertalpbilal/status/1392138557268107269"><img src="/img/tweets/poll3.png" /></a>
+<a href="https://twitter.com/sertalpbilal/status/1392138557268107269"><img src="/img/tweets/poll3.png" class="img-responsive" /></a>
 </p>
 
 Again, the solution is available on [GitHub](https://github.com/sertalpbilal/fpl_hindsight_optimization/blob/main/results/2019-20/final_solution_4.csv) in CSV format if you want to have a look.
