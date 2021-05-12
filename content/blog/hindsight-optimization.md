@@ -955,11 +955,20 @@ Here's a summary of all the models we considered.
 | 1        | 4984   | 1st          | Regular model | 1.09%  | 4 days    |
 | 2        | 3945   | 1st          | No hits       | 15.39% | 18 hours  |
 | 3        | 3236   | 1st          | No transfers  | 0%     | 6 minutes |
-| 4        | 2446   | 386th        | Ghost ship    | 0%     | 2 seconds |
+| 4        | 2446   | 386th[^research] | Ghost ship    | 0%     | 2 seconds |
 
 As a reminder, Joshua Bull won 2019-2020 season with 2557 points.
 
-I couldn't see anyone in Twitter to answer all 3 questions correctly (CDB), but if you did, send me a screenshot for a shout out.
+## Poll
+
+<div class="alert alert-info" role="alert">
+  <b>Update (2021-05-12):</b> For the last model we haven't checked auto-subs and VC replacements, as our data only shows points (not actual minutes).
+                              Some folks pointed out that it is actually possible to exceed 2500 points with a ghost ship team, so I decided to include (A) as a correct answer to the last question.
+</div>
+
+Congrats to [Neil](https://twitter.com/_NeilFPL) for answering all three questions correctly. 🥳
+
+{{< tweet 1392475744228581376 >}}
 
 ## Insight?
 
