@@ -1149,7 +1149,7 @@ $(document).ready( function () {
 
 Now, we have a perfectly symmetrical and non-decreasing model on our hands.
 Our final model manages to fix both issues we tackled:
-- Possesion of the ball on grids `[14,4]` and `[14,7]` are equal to each other
+- Possession of the ball on grids `[14,4]` and `[14,7]` are equal to each other
 - Passing from grid `[13,10]` to `[14,10]` does not decrease threat level
 
 So, to recap, expected threat is a method for assessing the value of having the ball possession for attacking team in pitch locations.
@@ -1364,7 +1364,7 @@ You can find my [Jupyter Notebook (Python) on GitHub](https://github.com/sertalp
 
 
 [^xG]: FBref has a [page on xG](https://fbref.com/en/expected-goals-model-explained/) if you would like to learn more about it.
-[^sb360]: Note that, similar (possesion value) models are available in market, and recently discussed in [StatsBomb's 360 reveal](https://statsbomb.com/2021/03/what-happened-at-statsbomb-evolve-360-data-quality-obv-and-more/).
+[^sb360]: Note that, similar (possession value) models are available in market, and recently discussed in [StatsBomb's 360 reveal](https://statsbomb.com/2021/03/what-happened-at-statsbomb-evolve-360-data-quality-obv-and-more/).
 [^grid]: Field drawing is based on this [Blocks page](https://bl.ocks.org/balders93/98ff5f77b82eea28f47c72e1e256286d)
 [^nested]: Here $\mathrm{xT}\_{x,y}$ depends on $\mathrm{xT}\_{z,w}$ and vice versa. Therefore, we have a nested structure.
 [^sstate]: We can think this as a Markov chain and $\mathrm{xT}$ as the steady-state probabilities.
