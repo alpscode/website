@@ -1,5 +1,5 @@
 baseurl = "https://alpscode.com/"
-title = "Alps Code"
+title = "AlpsCode"
 theme = "hugo-universal-theme"
 #themesDir = "../.."
 languageCode = "en-us"
@@ -75,9 +75,9 @@ pygmentsUseClasses = true
 
 [params]
     viewMorePostLink = "/blog/"
-    author = "DevCows"
-    defaultKeywords = ["devows", "hugo", "go"]
-    defaultDescription = "Site template made by devcows using hugo"
+    author = "Sertalp B. Cay"
+    defaultKeywords = ["analytics", "programming", "optimization"]
+    defaultDescription = ""
 
     # Google Maps API key (if not set will default to not passing a key.)
     #googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
@@ -98,7 +98,7 @@ pygmentsUseClasses = true
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "your@email.com"
+    email = "alpscode [at] gmail"
 
     about_us = "<p>AlpsCode is a technical blog about programming languages, tips, examples, and tech trends. Follow me at <a href='https://twitter.com/alpscode'>Twitter</a> and <a href='https://github.com/alpscode'>Github</a>.</p>"
     copyright = """
