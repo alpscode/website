@@ -202,7 +202,7 @@ You can find this game's details [here](https://sertalpbilal.github.io/rocket_le
 ### Win and Score Probabilities
 
 There were many other outcomes that could be calculated stemming from the xG model.
-One of them was calculating the probability of winning the game[^prob] while another was calculating the probability of having the final score based on xG values.
+One of them was calculating the probability of winning the game[^prob] while another was calculating the probability of the final score being what it was based on xG values.
 
 {{< img src="/img/uploads/rl_game_list.png" href="https://sertalpbilal.github.io/rocket_league_analytics/index.html" class="lazy" caption="List of games and their associated probabilities on right" figcls="img-responsive" >}}
 
@@ -214,7 +214,7 @@ It is better to check how the cumulative xG behaves over a rolling horizon, henc
 {{< img src="/img/uploads/xgd_chart.png" class="lazy" caption="Goal difference (GD) values of all 370 games we played together" figcls="img-responsive" >}}
 
 This plot shows the goal difference (GD) for a 10-game rolling average.
-The black line shows our xGD level, while green and red areas indicates the goal difference (our team minus opponent.
+The black line shows our xGD level, while green and red areas indicate the goal difference (our team minus opponent).
 It's great to see that our actual values align with expected values.
 
 ## What's Next?
@@ -231,10 +231,10 @@ This is what I'm getting excited about: it is possible to develop a model and fi
 
 I am glad to have taken the chance to have worked with Rocket League replay data as it proved to be a very useful exercise for me to learn the ins and outs of building predictive models.
 It was funny that we were playing our Rocket League matches and then rushing the data into our Docker container to generate stats.
-Arguably, checking our xG results and discussing over them with the help of data was more fun than playing the game :)
+Arguably, checking our xG results and discussing over them with the help of data was more fun than playing the game. :)
 
 These types of descriptive analyses are certainly useful for professional teams, but I think that prescriptive models will give us the edge we all desire in sports.
-Knowing what happened and the impact of different actions allows us to read future positions better.
+Knowing what happened and the impact of different actions allow us to read future positions better.
 I am genuinely excited for the role optimization and prescriptive analytics will play within sports.
 
 ### Some resources about xG
