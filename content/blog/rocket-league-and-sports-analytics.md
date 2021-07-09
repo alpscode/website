@@ -132,7 +132,7 @@ We collected 4328 games[^game] from the BallChasing website.
 These games gave us 657,897 hits in total[^data] and we trained the model using XGBoost[^model].
 
 {{% alertbox info %}}
-The final **ROC-AUC score** is **0.6342** and the **accuracy** of the classifier on the test set is **96.87%**. 
+The final **ROC-AUC score** is **0.6342**, **PR-AUC score** is **0.212**, and the **accuracy** of the classifier on the test set is **96.87%**. 
 The accuracy is skewed by the disproportionate amount of non-goal hits.
 {{% /alertbox %}}
 
