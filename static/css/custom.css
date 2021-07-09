@@ -21,6 +21,10 @@ th {
     background-color: #dfecff;
 }
 
+.table-hover>tbody>tr.hover {
+    background-color: #dfecff;
+}
+
 .post-content img {
     max-width: 100%;
 }

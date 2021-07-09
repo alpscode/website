@@ -303,6 +303,8 @@ function plot_pitch_shot(dom_id, data, display_scores=false, tick_opacity=0) {
 
         // step_function_callback.enter(d.time)
 
+        $("#entry-" + d.listorder).addClass("hover")
+
     }
     function highlight_shot_perm(event,d) {
         $(event.currentTarget).toggleClass("perm")
@@ -319,6 +321,7 @@ function plot_pitch_shot(dom_id, data, display_scores=false, tick_opacity=0) {
         d3.selectAll(".xg-entry").style("display", "inline")
         // $("#shot-" + d.order).removeClass("higlighted-row")
         // step_function_callback.leave()
+        $("#entry-" + d.listorder).removeClass("hover")
     }
 
     let shots = svg.append('g')
@@ -335,7 +338,7 @@ function plot_pitch_shot(dom_id, data, display_scores=false, tick_opacity=0) {
 
     shots.append("path")
         .attr("class", "shot-circles xg-entry")
-        .attr("id", (d) => 'marker-' + d.order)
+        .attr("id", (d) => 'marker-' + d.listorder)
         .style("stroke", "black")
         .style("stroke-opacity", (d) => d.shot == 'True' ? 1 : 0.1)
         .style("stroke-width", 20)
@@ -356,7 +359,7 @@ function plot_pitch_shot(dom_id, data, display_scores=false, tick_opacity=0) {
     
     goals.append("path")
         .attr("class", "goal-stars xg-entry")
-        .attr("id", (d) => 'marker-' + d.order)
+        .attr("id", (d) => 'marker-' + d.listorder)
         .style("stroke", "black")
         .style("stroke-opacity", 1)
         .style("stroke-width", 20)

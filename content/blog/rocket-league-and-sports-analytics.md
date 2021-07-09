@@ -160,15 +160,17 @@ You can hover/touch a few positions below.
 <script>
 
   $( document ).ready(() => {
-    plot_pitch_shot("#shot_pitch", data=shot_data)
-
+    
     let p = d3.scaleLinear().domain([0, 0.5, 1]).range(["red", "#0A0A0A", "lightgreen"])
 
     shot_data.forEach((x, index) => {
+      x.listorder = index
       let v = x.goal == "True"
       let names = {'enpitsu': 'Sertalp', 'games5425898691': 'Allan'}
-      $("#shot_table tbody").append(`<tr class="trow" style="cursor: pointer" data-index="${x.order}"><td>${names[x.shot_taker_name]}</td><td style="color:${p(x.xg)}">${parseFloat(x.xg).toFixed(3)}</td><td style="color:${v ? "green" : "red"}">${v ? "Yes" : "No"}</td><td><a target=_blank href="${x.link}">R</a></tr>`);
+      $("#shot_table tbody").append(`<tr id="entry-${x.listorder}" class="trow" style="cursor: pointer" data-index="${x.listorder}"><td>${names[x.shot_taker_name]}</td><td style="color:${p(x.xg)}">${parseFloat(x.xg).toFixed(3)}</td><td style="color:${v ? "green" : "red"}">${v ? "Yes" : "No"}</td><td><a target=_blank href="${x.link}">R</a></tr>`);
     })
+
+    plot_pitch_shot("#shot_pitch", data=shot_data)
 
     $(".trow").mouseover((e) => {
       let i = e.currentTarget.dataset.index;
