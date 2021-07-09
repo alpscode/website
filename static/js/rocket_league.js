@@ -495,10 +495,10 @@ function plot_xg_timeline(dom_id, data, max_x=300) {
         let raw_x = d3.pointer(event)[0]
         let ctime = x.invert(raw_x)
         let left_most = bisect(data.hits.orange, ctime)
-        // step_function_callback.enter(ctime)
+        step_function_callback.enter(ctime)
     }
     let m_leave = (e) => {
-        // step_function_callback.leave()
+        step_function_callback.leave()
     }
     svg.append('rect')
             .attr('width', width)
