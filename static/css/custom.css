@@ -17,6 +17,10 @@ th {
     border-bottom: 1px gray solid;
 }
 
+.table-hover>tbody>tr:hover {
+    background-color: #dfecff;
+}
+
 .post-content img {
     max-width: 100%;
 }
@@ -222,4 +226,9 @@ pre code {
 
 .x-scroll {
     overflow-x: auto;
+}
+
+.table-mini td {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
 }

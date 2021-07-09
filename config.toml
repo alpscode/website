@@ -17,6 +17,7 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 
+
 [menu]
 
 # Main menu
@@ -179,4 +180,7 @@ pygmentsUseClasses = true
 
 [markup.goldmark.renderer]
 unsafe = true # Allow HTML in md
+
+[markup.blackFriday]
+hrefTargetBlank = true
 
