@@ -95,7 +95,7 @@ All this provides quite a bit of exposure to cutting edge technologies that are 
 To help us interpret information, we created a dashboard to display raw stats such as number of shots, goals, assists, saves etc. 
 Allan's experience with *matplotlib* helped a lot during this process.
 
-{{< img src="/img/uploads/rocket_league_dashboard.png" class="lazy" href="/img/uploads/rocket_league_dashboard.png" caption="Rocket League stat dashboard" figcls="img-responsive" >}}
+{{< img src="/img/uploads/rocket_league_dashboard.png" class="lazy" href="https://sertalpbilal.github.io/rocket_league_analytics/dashboard.html" caption="Rocket League stat dashboard" figcls="img-responsive" >}}
 
 We have a simple [GitHub webpage](https://sertalpbilal.github.io/rocket_league_analytics/) that we regularly update with these stats if you're curious how this is presented.
 
