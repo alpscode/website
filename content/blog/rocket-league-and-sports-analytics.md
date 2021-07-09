@@ -24,7 +24,7 @@ While it takes a significant time, it's generally worth the time that you put in
 Initially my desire was to build a predictive model for football (soccer) before I realized that there were similar avenues that offered additional advantages.
 I was looking for a 'sandbox environment' where I could access plenty of data and really learn my stuff.
 Then, two things happened:
-1. I met one of the top Fantasy Premier League managers[^fplreview], Allan.
+1. I met one of the top Fantasy Premier League managers[^fplreview], [Allan](https://github.com/AllanDannUnder).
 2. I learned that there is a way to export data from the game Rocket League, which is a game I really enjoy.
 
 If you are not familiar with Rocket League and are wondering why I am this excited, let me explain briefly.
@@ -228,7 +228,7 @@ This is what I'm getting excited about: it is possible to develop a model and fi
 
 ## Last words
 
-I am glad to took the chance to work with Rocket League replay data as it proved to be a very useful exercise for me to learn the ins and outs of building predictive models.
+I am glad to have taken the chance to have worked with Rocket League replay data as it proved to be a very useful exercise for me to learn the ins and outs of building predictive models.
 It was funny that we were playing our Rocket League matches and then rushing the data into our Docker container to generate stats.
 Arguably, checking our xG results and discussing over them with the help of data was more fun than playing the game :)
 
