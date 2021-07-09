@@ -34,7 +34,7 @@ If you are not familiar with Rocket League and are wondering why I am this excit
 Rocket League is a multi-platform game where each player controls a car with a rocket booster attached to it.
 Each car is similar in terms of technical properties even though they have customizable cosmetics[^cars].
 The purpose of the game is to score as many goals as possible within 5 minutes using a comically oversized ball. 
-In the case of tie between the teams, the game goes to "Overtime" where the golden goal rule applies (aka sudden death;  first one to score wins the game).
+In the case of a tie between the teams, the game goes to "Overtime" where the golden goal rule applies (aka sudden death;  first one to score wins the game).
 
 So far, so good.
 Things are pretty straightforward which results in a game that's easy to play but hard to master especially when players start dribbling the ball mid-air with their rocket boosters.
@@ -97,7 +97,8 @@ Allan's experience with *matplotlib* helped a lot during this process.
 
 {{< img src="/img/uploads/rocket_league_dashboard.png" class="lazy" href="https://sertalpbilal.github.io/rocket_league_analytics/dashboard.html" caption="Rocket League stat dashboard" figcls="img-responsive" >}}
 
-We have a simple [GitHub webpage](https://sertalpbilal.github.io/rocket_league_analytics/) that we regularly update with these stats if you're curious how this is presented.
+We have a [GitHub webpage](https://sertalpbilal.github.io/rocket_league_analytics/) that we regularly update with these stats in case you are curious how this is presented.
+You can also check our [GitHub repository](https://github.com/sertalpbilal/rocket_league_analytics) to see what is under the hood.
 
 As you can see, the dashboard includes many components, from individual statistics to tracking heatmaps.
 Some of the features include:
