@@ -166,7 +166,8 @@ You can hover/touch a few positions below.
 
     shot_data.forEach((x, index) => {
       let v = x.goal == "True"
-      $("#shot_table tbody").append(`<tr class="trow" style="cursor: pointer" data-index="${x.order}"><td>${x.shot_taker_name}</td><td style="color:${p(x.xg)}">${parseFloat(x.xg).toFixed(3)}</td><td style="color:${v ? "green" : "red"}">${v ? "Yes" : "No"}</td><td><a target=_blank href="${x.link}">R</a></tr>`);
+      let names = {'enpitsu': 'Sertalp', 'games5425898691': 'Allan'}
+      $("#shot_table tbody").append(`<tr class="trow" style="cursor: pointer" data-index="${x.order}"><td>${names[x.shot_taker_name]}</td><td style="color:${p(x.xg)}">${parseFloat(x.xg).toFixed(3)}</td><td style="color:${v ? "green" : "red"}">${v ? "Yes" : "No"}</td><td><a target=_blank href="${x.link}">R</a></tr>`);
     })
 
     $(".trow").mouseover((e) => {
