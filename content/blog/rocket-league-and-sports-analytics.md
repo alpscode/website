@@ -1,6 +1,6 @@
 +++
 draft = false
-title = "Video Games as a Sports Analytics Sandbox"
+title = "Rocket League as a Sports Analytics Sandbox"
 date = "2021-07-09T09:00:00-04:00"
 tags = ["sports", "analytics", "rocket league", "mathematics", "predictive modeling", "machine learning"]
 categories = ["analytics"]
