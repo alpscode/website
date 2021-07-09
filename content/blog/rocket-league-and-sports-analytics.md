@@ -10,7 +10,7 @@ author = "Alp Cay"
 js = ["https://d3js.org/d3.v6.min.js", "https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js", "/js/rocket_league.js", "/js/rl_blog_values.js"]
 +++
 
-Taking a serious interest in sports analytics was probably the best thing I have done during the pandemic.
+Taking a serious interest in sports analytics was probably the best thing I did during the pandemic.
 Not only is it fun to play with and analyze, but it's also easy to make connections with ongoing events while also providing you with a broader understanding of the sports.
 There are, however, a few roadblocks.
 Reaching to the data, especially on-pitch data, is very difficult.
@@ -19,9 +19,9 @@ You can find summarized stats but more granular specifics such as tracking data 
 One thing I really wanted to take a shot at was building predictive models for sports.
 Despite me being a rather quantitative person I've never really attempted to build one out. 
 I believe that the best way to learn something is build it up from scratch.
-While it takes a significant time, it's generally worth the time that you put into it.
+While it takes a significant amount of time, it's almost always worth it.
 
-Initially my desire was to build a predictive model for football (soccer) before I realized that there were similar avenues that offered additional advantages.
+Initially, my desire was to build a predictive model for football (soccer) before I realized that there were similar avenues that offered additional advantages.
 I was looking for a 'sandbox environment' where I could access plenty of data and really learn my stuff.
 Then, two things happened:
 1. I met one of the top Fantasy Premier League managers[^fplreview], [Allan](https://github.com/AllanDannUnder).
@@ -45,11 +45,11 @@ The game is a mix of ice hockey (as the ball never goes out of the field) and fo
 It is a team game with various sizes, but I will mainly talk about 2 versus 2 player mode below.
 
 In terms of movements, you can control the direction, velocity, rotation (x/y/z) while also using the jump button to hit the ball harder.
-This allows you to take shots or control your car to a certain degree in order to dribble, passes, and block incoming shots.
+This allows you to take shots or control your car to a certain degree in order to dribble, pass, and block incoming shots.
 See the footage below of a goal I scored in a competitive game.
 
 <div class="text-center">
-<video width="100%" controls src="https://video.twimg.com/ext_tw_video/1404279651082592256/pu/vid/640x360/OXZ0LI2envPdhJOJ.mp4?tag=12"></video>
+<iframe style="max-width: 100%" width="560" height="315" src="https://www.youtube-nocookie.com/embed/RRfmZqhrxbQ?showinfo=0&rel=0&modestbranding=2&autohide=1&showinfo=0&controls=1&fs=0&html5=true" title="YouTube video player" frameborder="0" allow=""></iframe>
 </div>
 
 ## The Rabbit Hole
@@ -68,13 +68,13 @@ In a matter of days, we built a great pipeline that:
 - Downloads our games (BallChasing API).
 - Converts replay files to JSON and CSV data (carball).
 
-The amazing thing is that carball is able to give you data frame-by-frame (with 25 frame per second rate).
+The amazing thing is that carball is able to give you data frame-by-frame at a rate of 25 frame per second.
 That is a lot of information.
 By using the on-target shot detection carball offers, we were able to extract all data pertaining to player locations, velocities, and rocket booster levels.
 
 ## But... why?
 
-By using Rocket League as our perfect sandbox, we can gain substantial experience to models with the readily available data that is impeccable. 
+By using Rocket League as our perfect sandbox, we can gain substantial experience with models with the readily available and clean data.
 From there, anything you can build with Rocket League data, you can replicate to varying degrees across real-time sports with messier data (e.g. basketball, hockey, soccer, football).
 
 It makes it possible to:
