@@ -39,7 +39,7 @@ In the case of tie between the teams, the game goes to "Overtime" where the gold
 So far, so good.
 Things are pretty straightforward which results in a game that's easy to play but hard to master especially when players start dribbling the ball mid-air with their rocket boosters.
 
-{{< img src="/img/uploads/rocket_league_1.png" class="lazy screenshot" caption="Rocket League first person view" figcls="img-responsive" >}}
+{{< img src="/img/uploads/rocket_league_1.jpg" class="lazy screenshot" caption="Rocket League first person view" figcls="img-responsive" >}}
 
 The game is a mix of ice hockey (as the ball never goes out of the field) and football (similar in movements).
 It is a team game with various sizes, but I will mainly talk about 2 versus 2 player mode below.
