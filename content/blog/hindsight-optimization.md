@@ -981,7 +981,7 @@ Hindsight optimization is cool and nice as an exercise, but real value lies in m
 Optimization is a tool for prescriptive analytics, so it is better to utilize it for making better decisions through data and analytics.
 Nevertheless, this one was a very cool example to demonstrate the power of optimization.
 
-[^Math]: Watch Joshua's seminar talk on FPL titled ["Can maths tell us how to win at Fantasy Football?"](https://www.youtube.com/watch?v=LzEuweGrHvc) if you haven't yet. 
+[^Math]: Watch Joshua's seminar talk on FPL titled [Can maths tell us how to win at Fantasy Football?](https://www.youtube.com/watch?v=LzEuweGrHvc) if you haven't yet. 
          Spoiler alert, the answer is "Not really... but also, yes, sort of."
 [^githubdata]: A great repository for all sort of data regarding FPL [on GitHub](https://github.com/vaastav/Fantasy-Premier-League)
 [^mainmodel2]: We reached this optimal after 18 hours of optimization run. For technical folks out there, we still had a 0.89% gap at termination.
