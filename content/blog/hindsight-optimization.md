@@ -16,7 +16,7 @@ Sometimes Bruno, sometimes Gundogan, and sometimes Martinez.
 Week after week we were filled with regret after not buying (or worse: benching) that player.
 Of course with hindsight being 20/20, it's easy to see what you missed.
 
-But what if you could get the ['Almanac' just like in Back to the Future 2](https://youtu.be/zorz3SXqjv0) and know how ever week would play out?
+But what if you could get the <a target=_blank href="https://youtu.be/zorz3SXqjv0">'Almanac' just like in Back to the Future 2</a> and know how every week would play out?
 You might think it could make your life easier, but that's not entirely correct.
 
 Here is the *bad news*. When considering FPL as a full-season problem with exact outcomes, it is still a very difficult mathematical problem to solve.
