@@ -6,7 +6,7 @@ tags = ["FPL", "optimization", "analytics", "math"]
 categories = ["optimization"]
 banner = "/img/banners/optimization_arrow.jpg"
 bannercaption = "Photo by Jens Johnsson from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 js = ["https://d3js.org/d3.v6.min.js"]
 +++
 

@@ -6,7 +6,7 @@ tags = ["FPL", "optimization", "soccer", "analytics", "math"]
 categories = ["optimization"]
 banner = "/img/banners/pexels-pixabay-235990.jpg"
 bannercaption = "Photo by Pixabay from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 js = ["https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js", "https://cdnjs.cloudflare.com/ajax/libs/d3/6.3.1/d3.js", "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
 "https://d3js.org/d3-scale-chromatic.v1.min.js"]
 css = ["https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"]

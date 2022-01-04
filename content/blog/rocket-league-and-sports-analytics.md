@@ -6,7 +6,7 @@ tags = ["sports", "analytics", "rocket league", "mathematics", "predictive model
 categories = ["analytics"]
 banner = "/img/banners/pc.jpg"
 bannercaption = "Photo by FOX from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 js = ["https://d3js.org/d3.v6.min.js", "https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js", "/js/rocket_league.js", "/js/rl_blog_values.js"]
 +++
 

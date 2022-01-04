@@ -6,7 +6,7 @@ tags = ["Linux", "How-to"]
 categories = ["Quick tip"]
 banner = "/img/banners/gear.jpeg"
 bannercaption = "Photo by Shane Aldendorff from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 +++
 
 Linux is arguably the most developer-friendly operating system.

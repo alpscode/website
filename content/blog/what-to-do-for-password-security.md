@@ -6,7 +6,7 @@ tags = ["Security", "Python", "Script"]
 categories = ["Quick-tip"]
 banner = "/img/banners/lock.jpeg"
 bannercaption = "Photo by Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 +++
 
 > "I don't know that much about cyber, but I do think that's the number one problem with mankind."

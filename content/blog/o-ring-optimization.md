@@ -6,7 +6,7 @@ tags = ["FPL", "optimization", "analytics", "math"]
 categories = ["optimization"]
 banner = "/img/banners/pexels-pixabay-73871.jpg"
 bannercaption = "Photo by Pixabay from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 js = ["https://d3js.org/d3.v6.min.js"]
 +++
 

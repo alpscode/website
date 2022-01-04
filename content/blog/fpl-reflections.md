@@ -6,7 +6,7 @@ tags = ["sports", "analytics", "fantasy sports", "FPL", "Fantasy Premier League"
 categories = ["analytics"] 
 banner = "/img/banners/field.png" 
 bannercaption = "" 
-author = "Alp Cay" 
+author = "Sertalp B. Cay" 
 js = ["https://d3js.org/d3.v6.min.js", "https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"] 
 +++ 
 

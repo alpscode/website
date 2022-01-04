@@ -6,7 +6,7 @@ tags = ["sports", "analytics", "soccer", "optimization"]
 categories = ["Optimization"]
 banner = "img/banners/pexels-kevin-ku-577585.jpg"
 bannercaption = "Photo by Kevin Ku from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 js = ["https://d3js.org/d3.v6.min.js"]
 +++
 

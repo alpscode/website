@@ -6,7 +6,7 @@ tags = ["optimization", "analytics", "fpl", "fantasy-sports"]
 categories = ["optimization"]
 banner = "img/banners/fpl2.jpg"
 bannercaption = "Photo by Mike from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 +++
 
 I am playing Fantasy Premier League this seasons for the first time and I can already tell you that it is frustrating, despite using a mathematical model.

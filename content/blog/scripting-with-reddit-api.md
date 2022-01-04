@@ -6,7 +6,7 @@ tags = ["Reddit", "Python", "How-to", "API", "Script", "Web", "Parsing"]
 categories = ["Programming"]
 banner = "/img/banners/reddit-2.jpeg"
 bannercaption = "Photo by rawpixel.com from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 +++
 
 In this post, I will show how you can use Python to gather content and create a simple web page around it.

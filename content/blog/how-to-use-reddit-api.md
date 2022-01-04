@@ -6,7 +6,7 @@ tags = ["How-to", "Reddit", "API", "Python"]
 categories = ["Programming"]
 banner = "img/banners/reddit-1.jpeg"
 bannercaption = "Photo by JESHOOTS.com from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 +++
 
 One of the most valuable things I learned in recent years was learning how to use Public APIs to develop tools.

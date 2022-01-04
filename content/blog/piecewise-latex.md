@@ -6,7 +6,7 @@ tags = ["LaTeX", "Math"]
 categories = ["Quick-tip"]
 banner = "img/banners/graph.jpg"
 bannercaption = "Photo by Lukas from Pexels"
-author = "Alp Cay"
+author = "Sertalp B. Cay"
 +++
 
 I absolutely adore LaTeX generated documents and personally use it pretty much for anything I can.
