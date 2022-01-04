@@ -145,6 +145,8 @@ You can use the [EV Calculator](https://fploptimized.com/calculator.html) and se
 The EV Calculator can also show you the probability of having a better score in Fixture 1 than Fixture 2 (here, it is 46.7%).
 This way, you can get a much better sense of the amount of the risk you are incurring when you decide to go against the odds.
 
+These probabilities (anytime goalscoring, assist, clean sheet) can also be found online, and regularly shared on Twitter by some known accounts like [@FPL_Salah](https://twitter.com/FPL_Salah).
+
 ## Part 4: Predicting the Future *(Predictive Analytics)*
 
 As we keep adding more and more details to our EV model (goals, assists, bonus, saves, penalties) and are also trying to predict the starting line-ups of teams, things get more complicated.
@@ -241,8 +243,7 @@ Here is a summary.
 - Remember that point outcomes are probabilistic, and follow a simple (but noisy) distribution.
   Something as simple as betting odds is a better indicator of future GW returns.
   - [EV Calculator](https://fploptimized.com/calculator.html)
-- If you want to check expected returns for more than 1 GW, either develop your own model, or use a prediction (premium or free) model
-.
+- If you want to check expected returns for more than 1 GW, either develop your own model, or use a prediction (premium or free) model.
   - We have a list of available prediction models on our Discord server.
 - There are millions of paths to choose from. Use optimization to find out the  "Expected Value Optimal" strategy to minimize the transfers that you need to evaluate.
   - [Excel](https://youtube.com/playlist?list=PLrIyJJU8_viOLw3BovPDx5QLKkCb8XOTp) and [Python](https://youtube.com/playlist?list=PLrIyJJU8_viOags1yudB_wyafRuTNs1Ed) tutorials to learn how optimization models are developed.
