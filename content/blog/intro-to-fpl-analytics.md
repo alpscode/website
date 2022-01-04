@@ -20,21 +20,21 @@ You are sitting on your couch on a Saturday morning and suddenly remember that y
 You open the FPL app, sort players by total points so far and transfer the player on top that you do not own!
 You are not 100% sure how the points system works in FPL, but after all, past performance should be an indicator of future performance, right?
 
-The second part is true with an extra caveat: past performance is a noisy indicator of future performance.
+The second part is true with an extra caveat: past performance is a *noisy*[^1] indicator of future performance.
 You also know that performance depends on fixture difficulty: sometimes teams have tough away games and sometimes they have very easy home games.
-So, not all performances are equal.
 Moreover, you might know that sometimes a player does nothing useful on pitch but magically gets a penalty, hence get awarded with an assist.
+**So, not all performances are equal.**
 In a way you know that the assist number you see might be a bit misleading.
 
 Let us start with a simple exercise.
 You want to know how many goals Bernardo Silva will score in the next fixture.
-For this, you can pull up the games so far and see what he has scored.
+For this, you pull up Silva's previous games and see what he has scored.
 
 {{< img src="/img/uploads/bernardo_points_2.jpg" class="img-responsive lazy" caption="Bernardo Silva's FPL stats (2021/22 GW13 to GW18)" figcls="" >}}
 
-In the last 6 games between GW13 and GW18, he scored 0-1-2-0-0-0: 3 goals in 6 fixtures.
+In these past 6 games between GW13 and GW18, he scored 0-1-2-0-0-0: 3 goals in 6 fixtures.
 But perhaps you heard from someone that his 'underlyings' are not that good.
-What they mean is, Silva’s offensive actions in these games are likely to give a lower than 3 goals for an average player.
+What they mean is an average player with the same offensive actions as Silva would likely have fewer than 3 goals.
 You might think "Well, but he is not an average player!".
 This might be true, but players who can consistently beat their underlying goal expectations are rare.
 
@@ -42,15 +42,15 @@ This might be true, but players who can consistently beat their underlying goal 
 
 In the first 3 games Bernardo got 0-1-2 goals, but his 'xG' (expected goals - the proportion of times a shot with similar circumstances tends to result in a goal) shows 0.2, 0.2, and 0.4.
 In total, his xG is 0.8.
-Even though Silva might have exceeded his underlying with 3 goals, we would normally expect a player to get (roughly) 1 goal with 80% probability, and 0 goals with 20% probability.
+Even though Silva might have exceeded his underlying with 3 goals, we would normally expect a player to get (slightly less than) 1 goal over those three games.
 So, even though he got 3 goals in 3 games, it does not look like a sustainable trend.
 
-Then he got 0-0-0 goals, with xG of 0.5, 0.6, and 0.1.
-As you see his underlying got better, but he could not get any goals this time.
+Then Bernardo Silva got 0-0-0 goals, with xG of 0.5, 0.6, and 0.1.
+He continued to get in dangerous positions (and actually got in *more* dangerous positions), but did not score any goals this time.
 
 Studies have demonstrated that xG is currently the most predictive stat we have for future goals.
-A similar idea applies to assists and xA (expected assists), but with less predictive correlation than xG.
-Still, it probably makes sense to you that if a player keeps making great passes, but the shooting player fails to convert them, we can expect the former to get an assist sooner or later.
+A similar idea applies to assists and xA (expected assists).
+Intuitively if a player keeps getting off shots in dangerous positions or making great passes they will score or assist sooner or later.
 Note that having more data points about a player would give you a more reliable assessment.
 
 So, we often check **npxG** (non-penalty expected goals, since penalties skew numbers) and **xA** of players instead of their goal, shot, shot on target, and assist counts.
@@ -95,9 +95,9 @@ Now we are in a much better position to compare what fixture difficulties should
 
 ## Part 3: Rolling the Dice *(Expected Value)*
 
-When making decisions in FPL (indeed, in any game whatsoever!) we want to take into account both the value and the probability of the outcomes our decisions could have.
+When making decisions in FPL (indeed, in any game!) we want to take into account both the value and the probability of the outcomes our decisions could have.
 Any decision has a range of possible outcomes.
-Each individual outcome (say, keeping a CS, not keeping a CS, conceding two goals, etc) has two properties we are interested in: a particular probability and a particular value (most importantly, FPL points). 
+Each individual outcome (say, keeping a CS, not keeping a CS, conceding two goals, etc) has two properties we are interested in: a particular probability of happening and a particular value if it does happen (most importantly to us, how many FPL points do we get!) 
 We need a way to combine the value and probability of outcomes to assess which decision we ought to make.
 Enter Expected Value (EV), the lynchpin concept of game theory.
 Put succinctly, the EV of a decision is the probability-weighted average of the value of its outcomes. 
@@ -117,11 +117,11 @@ But how much better is it? We need to know the probability of each individual ou
 By assuming that the probabilities of each outcomes are distributed in a certain pattern, we may assign different probabilities to them occurring based off our predicted goals conceded estimate.
 We have chosen to assume a distribution (Poisson), which is a common distribution for rare events, like goals in football.
 
-This probability distribution can give us probabilities of conceding (or scoring) 0 goals, 1 goal, 2 goals, etc. in a game.
+We can use this distribution to generate the probabilities of conceding (or scoring) 0 goals, 1 goal, 2 goals, etc. in a game.
 
 {{< img src="/img/uploads/ev_calculator_2.png" class="img-responsive lazy" caption="Distribution of probabilities of goals conceded by Arsenal against Wolves" figcls="" >}}
 
-As you see here, for Arsenal’s game against Wolves, the probability of Arsenal finishing the game with a clean sheet is around 40%, conceding 1 goal is 36%, 2 goals is 16%, etc.
+Using the Poisson model the probability of Arsenal finishing the game against Wolves with a clean sheet is around 40%, conceding 1 goal is 36%, 2 goals is 16%, etc.
 Since defenders get -1 point for every 2 goals conceded, we can actually *simulate* this fixture many times and see how many goals Arsenal concede in it on average.
 
 - With 40% probability, a defender gets a CS, hence 6 points
@@ -129,7 +129,7 @@ Since defenders get -1 point for every 2 goals conceded, we can actually *simula
 - With 16% (2 goals) + 5% (3 goals) = 21% probability, a defender gets 1 point
 - With 1% (4 goals) + 0.2% (5 goals) = 1.2% probability, a defenders gets 0 points...
 
-By summing up these values, we can actually compare both fixtures, and calculate what it means for us.
+By summing up these values we can compare both fixtures and calculate what it means for our FPL decision making.
 - For the first fixture (Wolves), having an Arsenal defender brings you
   $$6 \times 40\\% + 2 \times 36\\% + 1 \times 21\\% + \dots = 3.38$$
   points on average.
@@ -145,6 +145,7 @@ You can use the [EV Calculator](https://fploptimized.com/calculator.html) and se
 The EV Calculator can also show you the probability of having a better score in Fixture 1 than Fixture 2 (here, it is 46.7%).
 This way, you can get a much better sense of the amount of the risk you are incurring when you decide to go against the odds.
 
+Although more complicated, similar processes can be used to predict goals and assists in a given fixture.
 These probabilities (anytime goalscoring, assist, clean sheet) can also be found online, and regularly shared on Twitter ([@FPL_Salah](https://twitter.com/FPL_Salah)).
 
 ## Part 4: Predicting the Future *(Predictive Analytics)*
@@ -155,7 +156,7 @@ On top of all these, some teams have notoriously difficult to predict starting l
 
 It is possible to add more details to our model by coming up with a probability of a certain player (e.g. Foden) to appear in the next game.
 If we know that there is a 70% chance that Foden will play all 90 minutes, 20% chance of playing as a late substitute and getting 30 minutes, and 9% chance of starting but getting substituted off, once again, we can calculate the EV using the potential outcomes and these probabilities.
-We just need to find his projected points **per 90 minutes** and adjust accordingly.
+Then, we can find his projected points **per 90 minutes** and calculate his expected points per game accordingly.
 
 For the EV calculation, you can also add more details to improve the prediction power of the model.
 Things like number of touches in the box, crosses, and key passes can all be added to your model.
@@ -211,9 +212,9 @@ Simulations are particularly useful to understand the effect of EO, and how it c
 One topic I often find myself discussing with others is how useful all these methods are.
 Some people claim it can never beat the top managers while some others are suspicious of the quality.
 
-I understand the concerns for the most part, but do not forget that these methods are not here to make you play like a robot.
-FPL has certain aspects that can never be accounted for inside a mathematical model.
-For example, if you are able to predict Manchester City line-ups better than others, you are already one step ahead for picking a good team.
+I understand the concerns, but **these methods are not here to make you play like a robot**.
+There are lots of places FPL managers can outperform models.
+For example you might be able to predict Manchester City lineups, putting you one step ahead in your path to picking a good team.
 All these analytics methods are here to simplify your decision making process.
 That is the main reason why we call these methods “*Decision Support Systems*”.
 *Augmented Intelligence* is the effective use of data and analytics to augment human intelligence.
@@ -223,7 +224,7 @@ Instead of making FPL boring for you, these tools can help you narrow down sensi
 
 I strongly believe that an automated analytics tool as advanced as we currently have can easily beat the field average.
 An obsessed FPL manager who tracks every piece of news and spends a lot of time on FPL can beat a fully automated FPL bot.
-However, a sufficiently good manager with these analytics approaches will end up on top in the long run more often.
+However, a sufficiently good manager with these analytics approaches will end up on top in the long run more often.[^2]
 That is partially why analytics is already huge in other fantasy sports where rewards are more significant.
 FPL is a great reason to get yourself familiarized with how to read data and to start learning about analytical tools.
 
@@ -273,3 +274,7 @@ Each part of this blog post is a collaborative work with the following awesome p
 - [Part 4](#part-4-predicting-the-future-predictive-analytics): *[@theFPLkiwi](https:/twitter.com/theFPLkiwi) 🥝*
 - [Part 5](#part-5-finding-a-path-inside-the-chaos-simulation-and-optimization): *[@FF_Trout](https:/twitter.com/ff_trout)*
 - [Part 6](#part-6-state-of-the-art-and-future-forefront-of-augmented-intelligence): *Allan Dann Under*
+
+
+[^1]: Noisy means there is a lot of uncertainty involved.
+[^2]: Chess is a great example where augmententation makes a big difference. See this article for more: https://qz.com/921099/the-future-of-ai-isnt-hal-its-intelligence-augmentation/ 
