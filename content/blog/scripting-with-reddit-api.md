@@ -61,7 +61,7 @@ dict_keys(['kind', 'data'])
 ```
 
 You can get familiar with the responses, but visualizing it helps immensely.
-Using your favorite JSON viewer (https://jsoneditoronline.org/, https://codebeautify.org/jsonviewer, http://jsonviewer.stack.hu/) copy the content `response.text` to visualize the JSON response.
+Using your favorite JSON viewer (https://jsoneditoronline.org/, https://codebeautify.org/jsonviewer, http://jsonviewer.stack.hu/, https://extendsclass.com/json-validator.html) copy the content `response.text` to visualize the JSON response.
 
 Reddit's response include two objects.
 The object `kind` shows, well, what kind of data that `data` object has.
