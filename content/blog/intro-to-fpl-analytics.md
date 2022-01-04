@@ -268,11 +268,11 @@ Here is a summary.
 ## Credits
 
 Each part of this blog post is a collaborative work with the following awesome people.
-- [Part 1](#part-1-seeing-beyond-the-curtain-underlying-stats): *[@FPLSimpson](https:/twitter.com/FPLSimpson) and [@dilksybab](https://twitter.com/dilksybab)*
-- [Part 2](#part-2-measuring-the-fixture-difficulty-team-strengths): *[@wee_rogue](https:/twitter.com/wee_rogue)*
-- [Part 3](#part-3-rolling-the-dice-expected-value): *[@FPLSigurd](https:/twitter.com/FPLSigurd)*
-- [Part 4](#part-4-predicting-the-future-predictive-analytics): *[@theFPLkiwi](https:/twitter.com/theFPLkiwi) 🥝*
-- [Part 5](#part-5-finding-a-path-inside-the-chaos-simulation-and-optimization): *[@FF_Trout](https:/twitter.com/ff_trout)*
+- [Part 1](#part-1-seeing-beyond-the-curtain-underlying-stats): *[@FPLSimpson](https://twitter.com/FPLSimpson) and [@dilksybab](https://twitter.com/dilksybab)*
+- [Part 2](#part-2-measuring-the-fixture-difficulty-team-strengths): *[@wee_rogue](https://twitter.com/wee_rogue)*
+- [Part 3](#part-3-rolling-the-dice-expected-value): *[@FPLSigurd](https://twitter.com/FPLSigurd)*
+- [Part 4](#part-4-predicting-the-future-predictive-analytics): *[@theFPLkiwi](https://twitter.com/theFPLkiwi) 🥝*
+- [Part 5](#part-5-finding-a-path-inside-the-chaos-simulation-and-optimization): *[@FF_Trout](https://twitter.com/ff_trout)*
 - [Part 6](#part-6-state-of-the-art-and-future-forefront-of-augmented-intelligence): *Allan Dann Under*
 
 
