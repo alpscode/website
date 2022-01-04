@@ -277,4 +277,4 @@ Each part of this blog post is a collaborative work with the following awesome p
 
 
 [^1]: Noisy means there is a lot of uncertainty involved.
-[^2]: Chess is a great example where augmententation makes a big difference. See this article for more: https://qz.com/921099/the-future-of-ai-isnt-hal-its-intelligence-augmentation/ 
+[^2]: Chess is a great example where intelligence augmententation makes a big difference. See this article for more: https://qz.com/921099/the-future-of-ai-isnt-hal-its-intelligence-augmentation/
