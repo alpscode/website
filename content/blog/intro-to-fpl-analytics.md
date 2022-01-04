@@ -145,7 +145,7 @@ You can use the [EV Calculator](https://fploptimized.com/calculator.html) and se
 The EV Calculator can also show you the probability of having a better score in Fixture 1 than Fixture 2 (here, it is 46.7%).
 This way, you can get a much better sense of the amount of the risk you are incurring when you decide to go against the odds.
 
-These probabilities (anytime goalscoring, assist, clean sheet) can also be found online, and regularly shared on Twitter by some known accounts like [@FPL_Salah](https://twitter.com/FPL_Salah).
+These probabilities (anytime goalscoring, assist, clean sheet) can also be found online, and regularly shared on Twitter ([@FPL_Salah](https://twitter.com/FPL_Salah)).
 
 ## Part 4: Predicting the Future *(Predictive Analytics)*
 
