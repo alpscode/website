@@ -259,7 +259,7 @@ Here is a summary.
 ## Glossary
 
 - EV: Expected Value. It is a term to measure the average value obtained out of possible outcomes using their associated probabilities.
-- EO: Effective Ownership. It signifies the percentage of effective owners summed with captaincy multipliers. E.g. Ignoring chips, if Salah is owned by 90% of players, benched by 1% of owners, and chosen as captain by 70% of owners, then his EO is `90% - 1% + 70% = 159%`. This affects how much the FPL average changes when he returns points.
+- EO: Effective Ownership. It signifies the percentage of effective owners summed with captaincy multipliers. E.g. Ignoring chips, if Salah is owned by 90% of players, benched by 1%, and chosen as captain by 70%, then his EO is `90% - 1% + 70% = 159%`. This affects how much the FPL average changes when he returns points.
  Note that FPL managers using the Triple Captain chip on a player and the Bench Boost chip while benching a specific player also increase a player’s EO.
 - GTO: Game Theory Optimal. A common term for the optimal strategy in games. FPL's GTO is a bit more complicated, but we know that maximizing EV is either GTO or a very close suboptimal strategy.
 - xG: Expected Goals. It is a metric used to figure out how likely a shot is to end up as a goal based on various attributes (shot location, body part used, opposing goalkeeper’s position, etc.).
