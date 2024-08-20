@@ -253,7 +253,7 @@ Here is a summary.
 - Know that there are multiple analytics tools and their number is increasing as days go by.
   Get familiar with what is available.
 - Want to learn more or have further questions? We have a friendly Discord server for people to hang out, discuss, and ask questions.
-  - Link to [FPL Analytics Discord server](https://discord.gg/HRjcXrTM54)
+  - Link to [FPL Analytics Discord server](https://discord.gg/HRjcXrTM54) (*temporarily disabled*)
   - Link to [Analytics xP League](https://t.co/ez21yuaT9p) mini-league
 
 ## Glossary
